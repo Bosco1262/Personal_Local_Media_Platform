@@ -1,0 +1,34 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.navibar {
+	display: flex;
+}
+
+.login {
+	font-size: larger;
+	background-color: skyblue;
+	width: 18.75rem;
+	height: 22.5rem;
+	border-radius: 1rem;
+	margin: 10% auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login h2 {
+	margin-top: 1.875rem;
+}
+
+.login .loginBox {
+	background-color: beige;
+	width: 100%;
+	margin-top: 1.875rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
