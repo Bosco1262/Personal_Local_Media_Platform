@@ -1,4 +1,29 @@
-// 用户中心与登录弹窗逻辑
+// ===================== 媒体控制按钮逻辑 =====================
+(function () {
+  const btnPrev = document.getElementById("btnPrev");
+  const btnNext = document.getElementById("btnNext");
+  const btnFavorite = document.getElementById("btnFavorite");
+
+  btnPrev?.addEventListener("click", function () {
+    // TODO: 切换到上一个媒体
+    alert("上一个媒体");
+  });
+
+  btnNext?.addEventListener("click", function () {
+    // TODO: 切换到下一个媒体
+    alert("下一个媒体");
+  });
+
+  btnFavorite?.addEventListener("click", function () {
+    // TODO: 标记为喜爱
+    btnFavorite.classList.toggle("favorited");
+    btnFavorite.textContent = btnFavorite.classList.contains("favorited")
+      ? "💖"
+      : "❤️";
+  });
+})();
+
+// ===================== 用户中心与登录弹窗逻辑 =====================
 (function () {
   const btnUser = document.getElementById("btnUserCenter");
   const modal = document.getElementById("loginModal");

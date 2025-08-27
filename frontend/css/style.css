@@ -4,24 +4,28 @@
   box-sizing: border-box;
 }
 
-/* 顶部导航条固定在页面顶端 */
+/* ===================== 顶部导航 ===================== */
 .navibar {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
+  height: 60px;
+  background: #333;
+  color: #fff;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding-left: 2rem;
+  font-size: 1.2rem;
 }
-
 .navibar .brand {
   font-weight: 600;
 }
-
 .user-center {
   margin-left: auto;
   padding-right: 1rem;
 }
-
 .user-button {
   background: #555;
   color: #fff;
@@ -30,35 +34,14 @@
   border-radius: 6px;
   cursor: pointer;
 }
-
 .user-button:hover {
   background: #666;
 }
 
-.login {
-  font-size: larger;
-  background-color: skyblue;
-  width: 18.75rem;
-  height: 22.5rem;
-  border-radius: 1rem;
-  margin: 10% auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.navibar {
-  width: 100%;
-  height: 60px;
-  background: #333;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-  font-size: 1.2rem;
-}
+/* ===================== 三栏布局 ===================== */
 
 /* 三栏容器：左侧栏 - 中心播放区 - 右侧栏 */
+
 .media-container {
   display: grid;
   grid-template-columns: 220px 1fr 220px;
@@ -68,21 +51,18 @@
   padding: 1rem;
   background: #f9f9f9;
 }
-
 .leftbar {
   background: #f5f5f5;
   border: 1px solid #e6e6e6;
   padding: 1rem;
   border-radius: 8px;
 }
-
 .rightbar {
   background: #f5f5f5;
   border: 1px solid #e6e6e6;
   padding: 1rem;
   border-radius: 8px;
 }
-
 .main-content {
   display: flex;
   flex-direction: column;
@@ -93,7 +73,6 @@
   border-radius: 8px;
   border: 1px solid #eee;
 }
-
 .titlebar {
   width: 100%;
   background: #e9e9e9;
@@ -106,23 +85,63 @@
 
 .media-display {
   width: min(960px, 100%);
-  aspect-ratio: 16 / 9;
-  background: #000;
-  border: 1px solid #111;
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
+  background: #181818;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   overflow: hidden;
+  padding: 0 0 24px 0;
 }
-
-/* 让播放器在容器中自适应且居中 */
 .media-display .player {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: contain;
   background: #000;
+  border-radius: 16px 16px 0 0;
+  border: none;
+  box-shadow: none;
 }
+
+/* ===================== 媒体控制按钮 ===================== */
+
+/* 媒体控制按钮样式 */
+
+.media-controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  gap: 32px;
+  background: #222;
+  border-radius: 0 0 16px 16px;
+  padding: 16px 0 0 0;
+  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.04);
+}
+.control-btn {
+  background: #333;
+  border: none;
+  border-radius: 10%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.control-btn:hover {
+  background: #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.control-btn:active {
+  background: #222;
+}
+
+/* ===================== 登录弹窗 ===================== */
 
 .login {
   font-size: larger;
@@ -137,11 +156,9 @@
   position: relative;
   z-index: 10;
 }
-
 .login h2 {
   margin-top: 1.875rem;
 }
-
 .login .loginbox {
   background-color: beige;
   width: 80%;
@@ -153,7 +170,6 @@
   padding: 0.5rem;
   border-radius: 4px;
 }
-
 .submitbox {
   margin-top: 1.5rem;
   padding: 0.5rem 1.5rem;
@@ -163,6 +179,8 @@
   color: #fff;
   cursor: pointer;
 }
+
+/* ===================== Modal弹窗 ===================== */
 
 /* Modal 基本样式 */
 .modal[aria-hidden="true"] {
