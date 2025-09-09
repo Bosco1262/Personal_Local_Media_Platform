@@ -1,88 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Media Platform</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal_Local_Media_Platform</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <style></style>
   </head>
   <body>
-    <nav class="navibar">
-      <div class="brand">Media Platform</div>
-      <div class="user-center">
-        <button
-          id="btnUserCenter"
-          class="user-button"
-          aria-haspopup="dialog"
-          aria-controls="loginModal"
-        >
-          用户中心（未登录）
-        </button>
-      </div>
-    </nav>
-
-    <div class="media-container">
-      <aside class="leftbar">leftbar</aside>
-
-      <main class="main-content">
-        <div class="titlebar">titlebar</div>
-        <div class="media-display">
-          <video class="player" controls>
-            <source src="" type="video/mp4" />
-            您的浏览器不支持视频标签。
-          </video>
-          <div class="media-controls">
-            <button id="btnPrev" class="control-btn" title="上一个">⏮️</button>
-            <button id="btnNext" class="control-btn" title="下一个">⏭️</button>
-            <button id="btnFavorite" class="control-btn" title="喜爱">
-              ❤️
-            </button>
-          </div>
-        </div>
-      </main>
-
-      <aside class="rightbar">rightbar</aside>
-    </div>
-
-    <!-- 登录弹窗 -->
-    <div
-      id="loginModal"
-      class="modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="loginTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-backdrop" data-close="true"></div>
-      <div class="modal-dialog" role="document">
-        <header class="modal-header">
-          <h3 id="loginTitle">登录</h3>
-          <button
-            class="modal-close"
-            type="button"
-            aria-label="关闭"
-            data-close="true"
-          >
-            ×
-          </button>
-        </header>
-        <form id="loginForm" class="modal-body">
-          <label>
-            <span>Username</span>
-            <input id="username" name="username" type="text" required />
-          </label>
-          <label>
-            <span>Password</span>
-            <input id="password" name="password" type="password" required />
-          </label>
-          <div class="modal-actions">
-            <button type="submit" class="submitbox">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
+    <div class="titlebar"></div>
     <script src="./js/script.js"></script>
   </body>
 </html>
