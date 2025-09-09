@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* Title Bar */
 .titlebar {
   display: flex;
   justify-content: space-between;
@@ -14,20 +15,64 @@
   background-color: gray;
 }
 
+/* Title Bar Left */
 .titlebar h2 {
   display: inline-block;
   font-size: 20px;
-  margin-left: 20px;
-  line-height: 50px;
+  margin: 15px;
+  line-height: 20px;
   color: white;
 }
 
-.titlebar > div {
-  margin: 13px;
-}
-
+/* Title Bar Middle */
 .titlebar .search-bar {
+  margin: 10px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
 }
 
+.titlebar .search-bar input {
+  width: 320px;
+  height: 100%;
+  border-radius: 3px;
+  padding-right: 40px;
+}
+
+.titlebar .search-bar .search-btn {
+  border-radius: 3px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: ;
+}
+
+.titlebar .search-bar .search-btn:hover {
+  background-color: lightgray;
+  box-shadow: 0px 0px 2px gray;
+}
+
+/* Title Bar Right */
 .titlebar .user-center {
+  height: 30px;
+  width: 288.89px;
+}
+
+.titlebar .user-center img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.titlebar .user-center button {
+  border-radius: 3px;
+}
+
+.titlebar .user-center button:hover {
+  background-color: lightgray;
+  box-shadow: 0px 0px 2px gray;
 }
