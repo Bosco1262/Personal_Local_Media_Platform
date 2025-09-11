@@ -1,7 +1,7 @@
 （此文档由AI生成）
 # Personal_Local_Media_Platform（个人本地媒体平台）
 
-[英文](README.md) | [简体中文](README_zh-CN.md)
+[English](README.md) | [简体中文](README_zh-CN.md)
 
 一个轻量级的本地媒体管理工具，用于组织和播放视频、音频和图像。它具有直观的过滤功能、基于标签的组织方式和响应式界面，为您提供个性化的媒体体验。
 
@@ -111,4 +111,4 @@ Personal_Local_Media_Platform 是一个用于管理本地媒体收藏的综合�
 
 ## 许可证
 
-本项目采用 MIT 许可证 - 详见 LICENSE 文件了解详情。
+本项目采用 GNU 许可证 - 详见 LICENSE 文件了解详情。
