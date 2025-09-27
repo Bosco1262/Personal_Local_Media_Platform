@@ -5,6 +5,48 @@
   box-sizing: border-box;
 }
 
+/* Theme Colors */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --primary-bg: #f4f4f4;
+  --secondary-bg: #e0e0e0;
+  --titlebar-bg: #333333;
+  --titlebar-text: #ffffff;
+  --button-bg: #f0f0f0;
+  --button-text: #333333;
+  --button-hover-bg: #dcdcdc;
+  --search-bg: #ffffff;
+  --search-text: #333333;
+  --search-btn-text: #555555;
+  --main-left-bg: #f8f9fa;
+  --main-right-bg: #ffffff;
+  --border-color: #dddddd;
+}
+
+body .dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-bg: #1e1e1e;
+  --secondary-bg: #2c2c2c;
+  --titlebar-bg: #1e1e1e;
+  --titlebar-text: #e0e0e0;
+  --button-bg: #333333;
+  --button-text: #e0e0e0;
+  --button-hover-bg: #444444;
+  --search-bg: #2c2c2c;
+  --search-text: #e0e0e0;
+  --search-btn-text: #bbbbbb;
+  --main-left-bg: #1c1c1c;
+  --main-right-bg: #121212;
+  --border-color: #3c3c3c;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 /* Title Bar */
 .titlebar {
   display: flex;
@@ -12,7 +54,8 @@
   width: 100%;
   height: 50px;
   font-style: uppercase;
-  background-color: gray;
+  background-color: var(--titlebar-bg);
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* Title Bar Left */
@@ -22,7 +65,7 @@
   width: 290px;
   margin: 15px;
   line-height: 20px;
-  color: white;
+  color: var(--titlebar-text);
 }
 
 /* Title Bar Middle */
@@ -38,6 +81,9 @@
   height: 100%;
   border-radius: 3px;
   padding-right: 40px;
+  background-color: var(--search-bg);
+  color: var(--search-text);
+  border: 1px solid var(--border-color);
 }
 
 .titlebar .search-bar .search-btn {
@@ -47,12 +93,13 @@
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: gray;
+  color: var(--search-btn-text);
+  background-color: transparent;
 }
 
 .titlebar .search-bar .search-btn:hover {
-  background-color: lightgray;
-  box-shadow: 0px 0px 2px gray;
+  background-color: var(--button-hover-bg);
+  box-shadow: 0px 0px 2px var(--border-color);
 }
 
 /* Title Bar Right */
@@ -89,6 +136,14 @@
   height: 25px;
   top: 50%;
   transform: translateY(-50%);
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--border-color);
+}
+
+.titlebar .titlebar-right #theme-switch-btn {
+  position: absolute;
+  right: 200px;
 }
 
 .titlebar .titlebar-right #uploadBtn {
@@ -97,6 +152,29 @@
 }
 
 .titlebar .titlebar-right button:hover {
-  background-color: lightgray;
-  box-shadow: 0px 0px 2px gray;
+  background-color: var(--button-hover-bg);
+  box-shadow: 0px 0px 2px var(--border-color);
+}
+/* Title Bar Finish */
+
+/* Main Content */
+.main-content {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+/* Main Left */
+.main-content .main-left {
+  width: 300px;
+  background-color: var(--main-left-bg);
+  padding: 15px;
+  border-right: 1px solid var(--border-color);
+}
+
+/* Main Right */
+.main-content .main-right {
+  flex: 1;
+  background-color: var(--main-right-bg);
+  padding: 15px;
 }

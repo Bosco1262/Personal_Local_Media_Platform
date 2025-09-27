@@ -7,28 +7,69 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- Title Bar -->
     <div class="titlebar">
+      <!-- Title Bar Left -->
       <h2 class="titlebar-left">Personal Local Media Platform</h2>
+
+      <!-- Title Bar Middle -->
       <div class="search-bar">
         <input type="text" placeholder="  Search..." />
         <button class="search-btn">Search</button>
       </div>
+
+      <!-- Title Bar Right -->
       <div class="titlebar-right">
+        <button id="theme-switch-btn">主题切换</button>
         <button id="uploadBtn">Upload</button>
         <div class="announcement-center">
           <img
+            id="announcement-icon"
             src="./images/titlebar/announcement/announcement-whitemode.png"
             alt="Announcement Icon"
           />
         </div>
         <div class="user-center">
           <img
+            id="user-icon"
             src="./images/titlebar/user-center/user-whitemode.png"
             alt="User Icon"
           />
         </div>
       </div>
     </div>
+    <!-- Title Bar Finish -->
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Main Left -->
+      <div class="main-left">
+        <h2>Left Section</h2>
+        <div>
+          <h3>Media Type</h3>
+          <h4>Video</h4>
+          <h4>Audio</h4>
+          <h4>Picture</h4>
+        </div>
+        <div>
+          <h3>Source Filter</h3>
+          <h4>All</h4>
+          <h4>B</h4>
+          <h4>C</h4>
+        </div>
+      </div>
+
+      <!-- Main Right -->
+      <div class="main-right">
+        <h2>Video Title</h2>
+        <p>Description of the video goes here.</p>
+        <br />
+        <video src="./videos/sample.mp4" controls></video>
+      </div>
+    </div>
+    <!-- Main Content Finish -->
+
+    <!-- Script -->
     <script src="./js/script.js"></script>
   </body>
 </html>
