@@ -111,25 +111,46 @@ body {
   position: relative;
 }
 
-.titlebar .titlebar-right img {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
+.titlebar .titlebar-right .icon-container {
   position: absolute;
+  width: 35px;
+  height: 35px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
 }
 
-.titlebar .titlebar-right img:hover {
+.titlebar .titlebar-right .icon-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.titlebar .titlebar-right .icon-container:hover {
   opacity: 0.8;
 }
 
-.titlebar .titlebar-right .user-center img {
+.titlebar .titlebar-right .icon-container .icon-dark {
+  opacity: 0;
+}
+
+.dark-mode .titlebar .titlebar-right .icon-container .icon-light {
+  opacity: 0;
+}
+
+.dark-mode .titlebar .titlebar-right .icon-container .icon-dark {
+  opacity: 1;
+}
+
+.titlebar .titlebar-right .user-center {
   right: 20px;
 }
 
-.titlebar .titlebar-right .announcement-center img {
+.titlebar .titlebar-right .announcement-center {
   right: 65px;
 }
 
